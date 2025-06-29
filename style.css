@@ -93,7 +93,7 @@ p {
 
 /* صفحة الرئيسية */
 .hero-section {
-  background-image: url(Pics/Background.png);
+  background-image: url(./Pics/Background.png);
   background-size:cover;
   background-position: center;
   height: 100vh;
