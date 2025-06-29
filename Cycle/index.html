@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cycle</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+</head>
+<body>
+
+  <!-- شريط التنقل -->
+  <header class="navbar">
+    <a href="#home" class="logo-link">
+      <img src="Pics/cycle(web logo2).png" alt="Cycle Logo" class="logo" />
+    </a>
+    <nav class="nav-links">
+      <a href="#home">الرئيسية</a>
+      <a href="#about">عن سايكل</a>
+      <a href="#restaurants">عملائنا</a>
+      <a href="#contract">تعاقد</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+  </header>
+
+  <!-- المحتوى -->
+  <main>
+    <section id="home" class="hero-section"></section>
+
+    <section id="about">
+      <h2>عن سايكل</h2>
+      <p>شركة ناشئة لجمع المخلفات الصلبة بنقاط... يمكنك استبدالها  بكاشات أو خصومات علي منتجات أو التبرع بها للجمعيات الخيرية الشريكة لنا</p>
+
+      <div class="swiper mySwiper">
+        <!-- المحتوى المتحرك -->
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="Pics/Cartoon_charcter.png" alt="الخطوة 1" />
+            <p><a href="#contract">تعاقد معنا</a> أو <a href="#contact">تواصل</a> لجمع مخلفاتك الصلبة</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="Pics/Piggy bank2.png" alt="الخطوة 2" />
+            <p>جمع نقاط</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="Pics/image 3.png" alt="الخطوة 3" />
+            <p>استبدال نقاطك بكاشات، خصومات علي منتجات غذائية أو تبرع بها للجمعيات الخيرية الشريكة لنا</p>
+          </div>
+        </div>
+
+        <!-- الأسهم -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <section id="restaurants">
+      <h2>عملائنا</h2>
+      <div class="restaurant-list" id="restaurantContainer"></div>
+    </section>
+
+    <section id="contract">
+      <h2>تعاقد معنا</h2>
+      <form action="https://formspree.io/f/mgvydwrg" method="post" class="contract-form">
+        <input type="text" name="businessName" placeholder="اسم النشاط" required />
+        <input type="email" name="email" placeholder="البريد الإلكتروني" required />
+        <input type="tel" name="phone" placeholder="رقم الهاتف" required />
+        <select name="type" id="typeSelect" required>
+          <option value="">اختر نوع النشاط</option>
+          <option value="مطعم">مطعم</option>
+          <option value="كافيه">كافيه</option>
+          <option value="قاعة مناسبات">قاعة مناسبات</option>
+          <option value="أخرى">أخرى</option>
+        </select>
+        <input type="text" id="otherInput" name="otherType" placeholder="اكتب نوع النشاط" style="display: none;" />
+        <textarea name="message" rows="4" placeholder="ملاحظات أو رسالة..."></textarea>
+        <button type="submit">أرسل الطلب</button>
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2>تواصل معنا</h2>
+      <div class="contact-methods">
+        <a href="mailto:cyclehq.team@gmail.com" class="contact-item" target="_blank">
+          <img src="Pics/email.png" alt="Gmail" class="contact-icon" />
+          <span>cyclehq.team@gmail.com</span>
+        </a>
+        <a href="https://wa.me/201012051964" class="contact-item" target="_blank">
+          <img src="Pics/whatsapp.png" alt="WhatsApp" class="contact-icon" />
+          <span>01012051964</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- تهيئة Swiper -->
+  <script>
+    window.addEventListener("load", function () {
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          768: { slidesPerView: 1 },
+          1024: { slidesPerView: 1 },
+        },
+      });
+    });
+  </script>
+
+  <!-- ملف الجافاسكريبت الرئيسي -->
+  <script src="main.js"></script>
+</body>
+</html>
